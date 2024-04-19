@@ -67,3 +67,22 @@ for (let i = 0; i < 4 ; i++) {
   Array [i] = ID[i]+ " " + Name[i] + " " + Occupation[i]+ " " + Age[i];
 	console.log( Array [i]);
 }
+
+console.log("========================================================")
+
+let str = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26" ;
+
+let arr = [];
+let rows= 5;
+let columns= 4;
+
+let value = 0;
+// creating two-dimensional array
+for (let i = 0; i < rows; i++) {
+  arr[i] = [];
+  for (let j = 0; j < columns; j++) {
+    arr[i][j] = value++;
+  }
+}
+
+console.log(arr)

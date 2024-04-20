@@ -118,3 +118,16 @@ let newArray= [];
  }
  }
 console.log(newArray)
+
+//Part 4: Sorting and Manipulating Data
+newArray.pop()
+newArray.splice(1,0,{ id: "48", name: "Barry", occupation: "Runner", age: "25" })
+newArray.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" })
+console.log(newArray)
+
+let avgAge=0;
+for(i=0;i<newArray.length;i++){
+  avgAge+=parseInt(newArray[i].age)
+  }
+  avgAge=avgAge/newArray.length
+  console.log(avgAge)

@@ -131,3 +131,15 @@ for(i=0;i<newArray.length;i++){
   }
   avgAge=avgAge/newArray.length
   console.log(avgAge)
+
+ //Part 5: Full Circle
+ 
+let strReverse=''
+strReverse=Object.keys(newArray[0]).toString()
+for(i=1; i<newArray.length;i++){
+  strReverse+='\\n'
+  strReverse+=Object.values(newArray[i]).toString()
+}
+console.log(strReverse)
+
+

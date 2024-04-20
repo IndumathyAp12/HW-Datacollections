@@ -54,29 +54,30 @@ console.log("============================================================")
 //Part 1 -Replacing JavaScript switch statement with Array literals
 
 
-const ID = ["42" , "57" , "63" , "98"];
-const Name = [ "Bruce" , "Bob" , "Blaine" , "Bill"];
-const Occupation = ["Knight" , "Fry cook" , "Quiz Master" , "Doctor's Assistant" ];
-const Age = ["41" , "19" , "58" , "26"] ;
+const ID = ["42", "57", "63", "98"];
+const Name = ["Bruce", "Bob", "Blaine", "Bill"];
+const Occupation = ["Knight", "Fry cook", "Quiz Master", "Doctor's Assistant"];
+const Age = ["41", "19", "58", "26"];
 const Array = [""];
-const title = [ "ID"  , "Name" , "Occupation" , "Age"];
+const title = ["ID", "Name", "Occupation", "Age"];
 
 console.log(`${title[0]} ${title[1]} ${title[2]} ${title[3]}`);
 
-for (let i = 0; i < 4 ; i++) {
-  Array [i] = ID[i]+ " " + Name[i] + " " + Occupation[i]+ " " + Age[i];
-	console.log( Array [i]);
+for (let i = 0; i < 4; i++) {
+  Array[i] = ID[i] + " " + Name[i] + " " + Occupation[i] + " " + Age[i];
+  console.log(Array[i]);
 }
 
 console.log("========================================================")
 
 // Part 2: Expanding Functionality 
 let str = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26" ;
-
 let arr = [];
-let rows= [];
-let columns= [];
-let numofColumns
+let rows = [];
+let columns = [];
+
+
+let numofColumns 
 
 // let value = 0;
 // // creating two-dimensional array
@@ -100,3 +101,20 @@ for ( i = 0 ; i < rows.length ; i++) {
 }
 console.log(arr)
  
+
+console.log("=========================================================")
+
+//Part 3: Transforming Data
+
+
+
+let arrHead = arr[0];
+let newArray= [];
+ for (let i=1 ; i< arr.length; i++){
+ newArray[i-1]={};
+ for (let j=0 ; j<arr.length-1; j++){
+
+ newArray[i-1][arrHead[j].toLowerCase()]=arr[i][j];
+ }
+ }
+console.log(newArray)
